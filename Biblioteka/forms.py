@@ -15,7 +15,7 @@ def reload_authors():
         choices_list.append(f"{author.get('first_name')} {author.get('last_name')}")
 reload_authors()
 
-
+# znalazłem zupełnie inne rozwiązanie dla ID, nie dodaję go w formularzu tylko w models/books.create()
 class BookForm(FlaskForm):
     title=StringField("Tytuł", validators=[DataRequired()])
     author=SelectField("Autor",choices = choices_list, validators=[DataRequired()])
